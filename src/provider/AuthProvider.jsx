@@ -19,7 +19,7 @@ export const AuthContext = createContext()
         return signInWithPopup(auth, provider)
     }
     const signOutUser = () =>{
-        signOut(auth)
+        return signOut(auth)
     }
     const updateUserProfile=(name, image)=>{
         return updateProfile(auth.currentUser, {

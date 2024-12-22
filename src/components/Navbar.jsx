@@ -1,17 +1,35 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Navbar = () => {
+  const {user, signOutUser} = useContext(AuthContext)
   const items = (
     <>
-     <Link><li>Home </li></Link>
-    <Link><li>Queries</li></Link>
-    <Link><li>Recommendations For Me</li></Link>
-    <Link><li>My Queries</li></Link>
-    <Link><li>My recommendations</li></Link>
+     <Link to="/"><li>Home </li></Link>
+    <Link to="/queries"><li>Queries</li></Link>
+    <Link to="/recommendations"><li>Recommendations For Me</li></Link>
+    <Link to="/myqueries"><li>My Queries</li></Link>
+    <Link to="/myrecommendations"><li>My recommendations</li></Link>
       
     </>
   )
+  const handleSignOut = () =>{
+    signOutUser()
+      .then(result=>{
+       Swal.fire({
+              icon: "success",
+              title: "Logged out Successfully",
+              showConfirmButton: false,
+              timer: 1500
+            });
+    })
+    .catch(error=>
+      console.log(error)
+      
+    )
+  }
     return (
         <div className="navbar bg-base-100">
   <div className="navbar-start">
@@ -44,7 +62,10 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Login</a>
+    {
+      user? <Link to="/auth/login"><button onClick={handleSignOut} className='btn'>Logout</button></Link> : <Link to="/auth/login"><button className='btn'>Login</button></Link>
+    }
+    
   </div>
 </div>
     );
