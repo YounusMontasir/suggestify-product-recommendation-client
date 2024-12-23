@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import axios from 'axios';
+import MyQuery from '../components/MyQuery';
 
 const MyQueries = () => {
     const {user} = useContext(AuthContext)
-    const {email, displayName, photoURL} = user;
     
   const handleAddQuery = (e) => {
     e.preventDefault(); // Prevent default form submission behavior
@@ -19,7 +19,7 @@ const MyQueries = () => {
     let recommendationCount = 0;
 
     const query = {productName, productBrand, productImageURL, queryTitle, boycottingReason, 
-        currentDateTime: formattedDate, userEmail: email, userName: displayName, userProfileImage: photoURL, recommendationCount  }
+        currentDateTime: formattedDate, userEmail: user?.email, userName: user?.displayName, userProfileImage: user?.photoURL, recommendationCount  }
         axios.post("http://localhost:5000/queries", query)
         .then(res=>{
             console.log(res.data);
@@ -45,6 +45,9 @@ const MyQueries = () => {
           Add Query
         </button>
       </div>
+      <div>
+        <MyQuery></MyQuery>
+        </div>
 
 
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
@@ -117,6 +120,7 @@ const MyQueries = () => {
           </div>
         </form>
       </dialog>
+    
     </div>
   );
 };

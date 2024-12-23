@@ -19,7 +19,7 @@ const QueryDetails = () => {
     return (
         <div className='grid grid-cols-2'>
           <div>
-            
+            <p>query details</p>
           </div>
         </div>
     );

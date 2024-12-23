@@ -10,15 +10,20 @@ export const AuthContext = createContext()
     const provider = new GoogleAuthProvider();
 
     const createUser = (email,password) =>{
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
+        
     } 
     const loginUser = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
     const loginWithGoogle = () =>{
+        setLoading(true)
         return signInWithPopup(auth, provider)
     }
     const signOutUser = () =>{
+        setLoading(true)
         return signOut(auth)
     }
     const updateUserProfile=(name, image)=>{
