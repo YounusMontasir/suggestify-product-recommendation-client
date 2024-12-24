@@ -8,7 +8,7 @@ const MyQuery = () => {
     const [myQuery, setMyQuery] = useState([])
     const {user} = useContext(AuthContext)
     useEffect(()=>{
-        axios.get(`http://localhost:5000/queries/${user.email}`)
+        axios.get(`http://localhost:5000/queries/${user.email}`, {withCredentials: true})
         .then(res=>{
             setMyQuery(res.data);
             

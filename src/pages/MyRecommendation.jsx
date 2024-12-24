@@ -6,7 +6,7 @@ const MyRecommendation = () => {
     const {user} = useContext(AuthContext)
     const [myRecommendations, setMyRecommendations] = useState([])
     useEffect(()=>{
-        axios.get(`http://localhost:5000/recommendations?recommenderEmail=${user.email}`)
+        axios.get(`http://localhost:5000/recommendations?recommenderEmail=${user.email}`,{withCredentials: true})
         .then(res=>{
            setMyRecommendations(res.data)
             

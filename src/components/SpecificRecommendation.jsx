@@ -8,7 +8,7 @@ const SpecificRecommendation = () => {
 
     
     useEffect(()=>{
-        axios.get(`http://localhost:5000/recommendations?id=${id}`)
+        axios.get(`http://localhost:5000/recommendations?id=${id}`, {withCredentials: true})
         .then(res=>{
             setSpecificQuery(res.data)
             
