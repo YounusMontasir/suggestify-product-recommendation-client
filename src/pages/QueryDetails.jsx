@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import axios from 'axios';
+import SpecificRecommendation from '../components/SpecificRecommendation';
 
 const QueryDetails = () => {
     const query = useLoaderData()
@@ -40,14 +41,7 @@ const QueryDetails = () => {
 
     }
     
-    // queryId 
-    // QueryTitle 
-    // productName
-    // userEmail ( who create the query ) 
-    // userName ( who created the query ) 
-    // Recommender Email ( current user email ) 
-    // Recommender Name ( current user Name ) 
-    // Current Time-Stamp ( current Date ) 
+    
     
 
     return (
@@ -118,6 +112,9 @@ const QueryDetails = () => {
           </div>
         </form>
           </div>
+        </div>
+        <div>
+          <SpecificRecommendation id={_id}></SpecificRecommendation>
         </div>
        </div>
     );
