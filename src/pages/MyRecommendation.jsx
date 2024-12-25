@@ -71,7 +71,7 @@ const MyRecommendation = () => {
                <td className="py-2 md:py-4 px-3 md:px-6">{recommendation.productName}</td>
                <td className="py-2 md:py-4 px-3 md:px-6">{recommendation.recommendedProductName}</td>
                <td className="py-2 md:py-4 px-3 md:px-6 hidden md:block">{recommendation.userName}</td>
-               <td className="py-2 md:py-4 px-3 md:px-6"> <Link><button onClick={()=>handleDeleteQuery(recommendation._id)} className='btn btn-md text-white bg-[#2D86EB] rounded-md'>Delete</button></Link></td>
+               <td className="py-2 md:py-4 px-3 md:px-6"> <Link><button onClick={()=>handleDeleteQuery(recommendation._id)} className='btn btn-sm md:btn-md text-white bg-[#2D86EB] rounded-md'>Delete</button></Link></td>
              </tr>
                   
                )

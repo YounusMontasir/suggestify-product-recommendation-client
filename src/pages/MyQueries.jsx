@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import axios from 'axios';
 import MyQuery from '../components/MyQuery';
+import Swal from 'sweetalert2';
 
 const MyQueries = () => {
     const {user} = useContext(AuthContext)
@@ -22,7 +23,14 @@ const MyQueries = () => {
         currentDateTime: formattedDate, userEmail: user?.email, userName: user?.displayName, userProfileImage: user?.photoURL, recommendationCount  }
         axios.post("http://localhost:5000/queries", query)
         .then(res=>{
-            console.log(res.data);
+             Swal.fire({
+                              icon: 'success',
+                              title: 'Query updated successfully!',
+                              showConfirmButton: false,
+                              timer: 1500,
+                            });
+                            navigate("/queries");
+            
             
         })
         .catch(err => {
@@ -36,7 +44,7 @@ const MyQueries = () => {
     <div>
       {/* Banner Section */}
       <div className="h-[600px] bg-[url('https://i.ibb.co.com/10f7g5Z/my-query-banner.jpg')] bg-cover bg-center flex flex-col items-center justify-center">
-      <h1 className="text-5xl md:text-6xl text-[#F9B851] font-bold mb-6 ">Have a Question? Let Us Help!</h1>
+      <h1 className="text-3xl text-center md:text-4xl lg:text-6xl text-[#F9B851] font-bold mb-6 ">Have a Question? Let Us Help!</h1>
     <p className="text-xl max-w-xl text-white text-center mb-6">
     "Submit your query about any product, and we'll provide the answers you need!"
     </p>

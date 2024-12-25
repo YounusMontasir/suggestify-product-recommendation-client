@@ -82,13 +82,13 @@ const Register = () => {
   
   }
   return (
-    <div className="flex w-10/12 gap-0 justify-around mx-auto my-20">
+    <div className="flex flex-col gap-6 lg:flex-row w-11/12 lg:w-10/12  justify-around mx-auto my-20">
       <div >
-        <Lottie className="w-full mt-10 ml-10" animationData={regsiterLottie}>
+        <Lottie className="w-full mt-10 lg:ml-10" animationData={regsiterLottie}>
 
         </Lottie>
       </div>
-      <div class="w-1/2  mx-auto">
+      <div class="w-full lg:w-1/2  mx-auto">
       <div className='relative inline-block w-full'>
          <h3 className='text-3xl mb-4 relative'>Register to Suggestify
           <span class="absolute left-0 top-12 t-4 h-0.5 bg-blue-500 w-2/12"></span>

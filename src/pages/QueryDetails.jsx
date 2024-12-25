@@ -48,7 +48,7 @@ const QueryDetails = () => {
     return (
        <div>
         <Navbar></Navbar>
-        <div className='w-10/12 mx-auto mt-10'>
+        <div className='w-11/12 lg:w-10/12 mx-auto mt-10'>
         {/* query Authors */}
         <div className='mb-10'> 
           <h3 className='text-3xl font-bold mb-4'>Query Authors:</h3>
@@ -60,14 +60,14 @@ const QueryDetails = () => {
             </div>
           </div>
         </div>
-         <div className='grid grid-cols-2  border rounded-md p-6'>
+         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 border rounded-md p-6'>
           {/* query data */}
-          <div className="flex flex-col items-center p-6   bg-white w-full mx-auto">
+          <div className="flex flex-col items-center    bg-white w-full mx-auto">
   {/* Product Image */}
   <img className="h-80 w-80 object-cover mb-4" src={productImageURL} alt={`${productName}`} />
   
   {/* Product Details */}
-  <div className=" space-y-3">
+  <div className="space-y-3">
     <h3 className="text-2xl text-black">
       <strong>Product Name:</strong> {productName}
     </h3>
@@ -92,9 +92,9 @@ const QueryDetails = () => {
           <div className=''>
           <div className='relative inline-block w-full'>
          <h3 className='text-3xl mb-4 relative'>Recommend For This Product:
-          <span class="absolute left-0 top-12 t-4 h-0.5 bg-blue-500 w-2/12"></span>
+          <span class="absolute left-0 hidden md:block top-12 t-4 h-0.5 bg-blue-500 w-2/12"></span>
           </h3>
-          <div class="absolute top-12 bottom-0 w-full h-px bg-gray-300"></div>
+          <div class="absolute hidden md:block top-12 bottom-0 w-full h-px bg-gray-300"></div>
          </div>
           <form method="" className="mt-10" onSubmit={handleRecommendation}>
           {/* Form Fields */}

@@ -60,7 +60,7 @@ const UpdateQuery = () => {
     return (
        <div>
         <Navbar></Navbar>
-         <div className='w-5/12 mx-auto mt-20 mb-20'>
+         <div className='w-11/12 lg:w-5/12 mx-auto mt-20 mb-20'>
          <div className='relative inline-block w-full'>
          <h3 className='text-3xl mb-4 relative'>Update Your Query
           <span class="absolute left-0 top-12 t-4 h-0.5 bg-blue-500 w-2/12"></span>

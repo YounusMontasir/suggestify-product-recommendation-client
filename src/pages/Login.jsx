@@ -68,13 +68,13 @@ const Login = () => {
           });
       };
     return (
-        <div className="flex w-10/12 gap-0 items-center mx-auto my-20">
+        <div className="flex flex-col lg:flex-row w-11/12 lg:w-10/12 gap-0 items-center mx-auto my-20">
           <div>
             <Lottie className="w-full" animationData={loginLottie}> 
 
             </Lottie>
           </div>
-             <div class="  w-1/2  mx-auto  ">
+             <div class=" w-full lg:w-1/2  mx-auto  ">
              <div className='relative inline-block w-full'>
          <h3 className='text-3xl mb-4 relative'>Login to Suggestify
           <span class="absolute left-0 top-12 t-4 h-0.5 bg-blue-500 w-2/12"></span>

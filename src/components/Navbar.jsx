@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import Swal from 'sweetalert2';
 import { CiUser } from 'react-icons/ci';
@@ -8,13 +8,13 @@ const Navbar = () => {
   const {user, signOutUser} = useContext(AuthContext)
   const items = (
     <>
-     <Link to="/"><li>Home</li></Link>
-    <Link to="/queries"><li>Queries</li></Link>
+     <NavLink to="/"><li>Home</li></NavLink>
+    <NavLink to="/queries"><li>Queries</li></NavLink>
     {user && (
     <>
-    <Link to="/recommendations"><li>Recommendations For Me</li></Link>
-    <Link to="/myqueries"><li>My Queries</li></Link>
-    <Link to="/myrecommendations"><li>My recommendations</li></Link>
+    <NavLink to="/recommendations"><li>Recommendations For Me</li></NavLink>
+    <NavLink to="/myqueries"><li>My Queries</li></NavLink>
+    <NavLink to="/myrecommendations"><li>My recommendations</li></NavLink>
     </>
     )}
       
@@ -62,8 +62,8 @@ const Navbar = () => {
         {items}
       </ul>
     </div>
-    <img className='w-16 h-16 rounded-full ml-4 ' src="https://i.ibb.co.com/M22BwbG/suggestify-logo.webp" alt="" />
-    <a className="btn btn-ghost text-2xl text-white">Suggestify</a>
+    <img className='w-10 h-10 md:w-16 md:h-16 rounded-full ml-4 ' src="https://i.ibb.co.com/M22BwbG/suggestify-logo.webp" alt="" />
+    <a className="text-xl md:text-2xl text-white font-bold ml-2">Suggestify</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 gap-6 text-[15px] font-semibold text-[#FFFFFFB3]">
@@ -72,7 +72,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
     {
-      user? <Link to="/auth/login"><button onClick={handleSignOut} className='btn btn-md text-[#0D233E] rounded-md'><CiUser className='h-5 font-bold w-5'/> Logout</button></Link> : <Link to="/auth/login"><button className='btn btn btn-md text-[#0D233E] rounded-md'>Login</button></Link>
+      user? <Link to="/auth/login"><button onClick={handleSignOut} className='btn btn-md text-[#0D233E] rounded-md'><CiUser className='h-5 font-bold w-5'/> Logout</button></Link> : <Link to="/auth/login"><button className='btn btn-md text-[#0D233E] rounded-md'>Login</button></Link>
     }
     
   </div>

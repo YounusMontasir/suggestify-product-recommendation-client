@@ -16,7 +16,7 @@ const Queries = () => {
       setActiveButton(cols); 
     };
     return (
-        <div className='w-10/12 mx-auto mb-20 mt-4'>
+        <div className='w-11/12 lg:w-10/12  mx-auto mb-20 mt-4'>
             <div className='flex justify-between mb-10'>
                 
                 <div class="join hidden lg:block">

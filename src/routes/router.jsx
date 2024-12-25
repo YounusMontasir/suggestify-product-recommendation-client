@@ -12,6 +12,7 @@ import RecommendationForYou from '../pages/RecommendationForYou';
 import QueryDetails from '../pages/QueryDetails';
 import UpdateQuery from '../pages/UpdateQuery';
 import PrivateRoute from './PrivateRoute';
+import ErrorPage from '../pages/ErrorPage';
 
 const router = createBrowserRouter([
     {
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <UpdateQuery></UpdateQuery>
         </PrivateRoute>,
+      },
+      {
+        path: "*",
+        element: <ErrorPage></ErrorPage>
       }
 
   ]);

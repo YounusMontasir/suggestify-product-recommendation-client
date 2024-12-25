@@ -23,7 +23,7 @@ const SpecificRecommendation = () => {
         Recommendations For This product
       </h3>
     
-    <div className="grid lg:grid-cols-2 gap-6"> 
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6"> 
     {specificQuery.map((query) => (
         <div key={query._id} className=" border-2 border-gray-200 rounded-md p-4">
           <div className="flex gap-6">
