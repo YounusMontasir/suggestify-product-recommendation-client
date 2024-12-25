@@ -31,13 +31,15 @@ const UpdateQuery = () => {
         
         axios.patch(`http://localhost:5000/queryupdate/${id}`, queryUpdate)
         .then(res=>{
-                console.log("Update successful:", res.data);
+                
                 Swal.fire({
                   icon: 'success',
                   title: 'Query updated successfully!',
                   showConfirmButton: false,
                   timer: 1500,
                 });
+                navigate("/myqueries");
+
         })
         navigate("/myqueries");
 

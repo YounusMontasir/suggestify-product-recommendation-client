@@ -3,12 +3,14 @@ import { AuthContext } from '../provider/AuthProvider';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useAxiosSecure from '../hooks/useAxiosSecure';
 
 const MyQuery = () => {
     const [myQuery, setMyQuery] = useState([])
     const {user} = useContext(AuthContext)
+    const axiosSecure = useAxiosSecure()
     useEffect(()=>{
-        axios.get(`http://localhost:5000/queries/${user.email}`, {withCredentials: true})
+        axiosSecure.get(`/queries/${user.email}`)
         .then(res=>{
             setMyQuery(res.data);
             

@@ -2,12 +2,14 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import useAxiosSecure from '../hooks/useAxiosSecure';
 
 const RecommendationForYou = () => {
     const {user} = useContext(AuthContext)
     const [recommendations, setRecommendations] = useState([])
+    const axiosSecure = useAxiosSecure()
     useEffect(()=>{
-        axios.get(`http://localhost:5000/recommendations?userEmail=${user.email}`,{withCredentials: true})
+        axiosSecure.get(`/recommendations?userEmail=${user.email}`)
         .then(res=>{
             setRecommendations(res.data)
             

@@ -8,11 +8,15 @@ const Navbar = () => {
   const {user, signOutUser} = useContext(AuthContext)
   const items = (
     <>
-     <Link to="/"><li>Home </li></Link>
+     <Link to="/"><li>Home</li></Link>
     <Link to="/queries"><li>Queries</li></Link>
+    {user && (
+    <>
     <Link to="/recommendations"><li>Recommendations For Me</li></Link>
     <Link to="/myqueries"><li>My Queries</li></Link>
     <Link to="/myrecommendations"><li>My recommendations</li></Link>
+    </>
+    )}
       
     </>
   )
