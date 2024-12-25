@@ -35,12 +35,16 @@ const MyQueries = () => {
   return (
     <div>
       {/* Banner Section */}
-      <div className="h-[600px] bg-[url('https://i.ibb.co.com/d0DchtF/add-query-bg.jpg')] bg-cover bg-center flex items-center justify-center">
+      <div className="h-[600px] bg-[url('https://i.ibb.co.com/10f7g5Z/my-query-banner.jpg')] bg-cover bg-center flex flex-col items-center justify-center">
+      <h1 className="text-5xl md:text-6xl text-[#F9B851] font-bold mb-6 ">Have a Question? Let Us Help!</h1>
+    <p className="text-xl max-w-xl text-white text-center mb-6">
+    "Submit your query about any product, and we'll provide the answers you need!"
+    </p>
         <button
           onClick={() => {
             document.getElementById('my_modal_5').showModal();
           }}
-          className="btn btn-accent"
+          className="btn btn-md text-white bg-[#2D86EB] rounded-md border-none"
         >
           Add Query
         </button>

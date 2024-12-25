@@ -47,23 +47,24 @@ const MyQuery = () => {
     }
     
     return (
-        <div className='grid grid-cols-3 w-10/12 mx-auto mt-20 mb-24'>
+        <div className='grid grid-cols-3 gap-6 w-10/12 mx-auto mt-20 mb-24'>
            {
             myQuery.map(query=>
-                <div key={query._id} className="card bg-base-100 w-96 shadow-xl">
-  <figure className="px-10 pt-10">
+                <div key={query._id} className="card bg-base-100 border border-gray-200 shadow-xl">
+  <figure className="pt-6">
     <img
       src={query.productImageURL}
       alt="Shoes"
-      className="rounded-xl" />
+      className="rounded-xl h-56" />
   </figure>
-  <div className="card-body items-center text-center">
-    <h2 className="card-title">{query.productName}</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions">
-     <Link to={`/queryupdate/${query._id}`}><button className='btn'>Update</button></Link>
-     <Link to={`/querydetails/${query._id}`}><button class="btn btn-primary">Details</button></Link>
-     <Link><button onClick={()=>handleDeleteQuery(query._id)} className='btn'>Delete</button></Link>
+  <div className="card-body">
+  <h2 class="card-title">{query.productName}</h2>
+    <p className='text-[#6C727C]'><strong>Query</strong>: {query.queryTitle}</p>
+    <p className='text-[#6C727C] mb-4'><strong>Recommendation Count:</strong> {query.recommendationCount}</p>
+    <div className="flex justify-evenly">
+     <Link to={`/queryupdate/${query._id}`}><button className='btn btn-md text-white bg-[#2D86EB] rounded-md'>Update</button></Link>
+     <Link to={`/querydetails/${query._id}`}><button class="btn btn-md text-black  rounded-md">Details</button></Link>
+     <Link><button onClick={()=>handleDeleteQuery(query._id)} className='btn btn-md text-white bg-[#2D86EB] rounded-md'>Delete</button></Link>
     </div>
   </div>
 </div>
