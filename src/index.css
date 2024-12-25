@@ -10,3 +10,9 @@
     font-weight: 400;
     font-style: normal;
   }
+
+  .btn-active{
+    background-color: #2D86EB ;
+    color: white;
+  }
+  

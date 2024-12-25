@@ -48,18 +48,18 @@ const MyRecommendation = () => {
           });
         }
     return (
-       <div className='w-10/12 mx-auto mb-20'>
+       <div className='w-11/12 lg:w-10/12 mx-auto mb-20'>
                   <h2 className='text-3xl text-center mb-10 mt-10 font-bold'> My Recommendation</h2>
                    <div class="border-2 border-gray-200 rounded-lg shadow-sm">
          <table className="w-full">
           
            <thead className=''>
              <tr className='font-bold text-[16px] text-black'>
-               <th className="py-4 px-6"></th>
-               <th className="py-4 px-6  text-start">Query Product</th>
-               <th className="py-4 px-6  text-start">Recommended Product</th>
-               <th className="py-4 px-6  text-start">Favorite Color</th>
-               <th className="py-4 px-6  text-start">View Details</th>
+               <th className="py-2 md:py-4 px-3 md:px-6"></th>
+               <th className="py-2 md:py-4 px-3 md:px-6  text-start">Query Product</th>
+               <th className="py-2 md:py-4 px-3 md:px-6  text-start">Recommended Product</th>
+               <th className="py-2 md:py-4 px-3 md:px-6 hidden md:block text-start">Query Author</th>
+               <th className="py-2 md:py-4 px-3 md:px-6  text-start">View Details</th>
              </tr>
            </thead>
            <tbody className=''>
@@ -67,11 +67,11 @@ const MyRecommendation = () => {
                 myRecommendations.map((recommendation,index)=>
        
                        <tr class="hover p-4">
-               <th className="py-4 px-6">{index+1}</th>
-               <td className="py-4 px-6">{recommendation.productName}</td>
-               <td className="py-4 px-6">{recommendation.recommendedProductName}</td>
-               <td className="py-4 px-6">{recommendation.recommenderEmail}</td>
-               <td className="py-4 px-6"> <Link><button onClick={()=>handleDeleteQuery(recommendation._id)} className='btn btn-md text-white bg-[#2D86EB] rounded-md'>Delete</button></Link></td>
+               <th className="py-2 md:py-4 px-3 md:px-6">{index+1}</th>
+               <td className="py-2 md:py-4 px-3 md:px-6">{recommendation.productName}</td>
+               <td className="py-2 md:py-4 px-3 md:px-6">{recommendation.recommendedProductName}</td>
+               <td className="py-2 md:py-4 px-3 md:px-6 hidden md:block">{recommendation.userName}</td>
+               <td className="py-2 md:py-4 px-3 md:px-6"> <Link><button onClick={()=>handleDeleteQuery(recommendation._id)} className='btn btn-md text-white bg-[#2D86EB] rounded-md'>Delete</button></Link></td>
              </tr>
                   
                )

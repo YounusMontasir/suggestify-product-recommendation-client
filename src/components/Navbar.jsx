@@ -38,11 +38,11 @@ const Navbar = () => {
   // #6C727C
   //  #0D233E
     return (
-       <div className='bg-[#212529] py-2 sticky top-0 z-10'>
-         <div className="navbar bg-[#212529] py-4 w-10/12 mx-auto">
+       <div className='bg-[#212529]  sticky top-0 z-10'>
+         <div className="navbar bg-[#212529] py-4 w-11/12 lg:w-10/12 mx-auto">
   <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+    <div className="dropdown ">
+      <div tabIndex={0} role="button" className="btn btn-white  lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
@@ -56,13 +56,13 @@ const Navbar = () => {
             d="M4 6h16M4 12h8m-8 6h16" />
         </svg>
       </div>
-      <ul
+      <ul 
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 px-1 gap-6 text-[15px] font-semibold text-[#FFFFFFB3] p-2 shadow">
+        className="menu menu-sm dropdown-content  rounded-box z-[1] mt-3 w-52 px-1 gap-6 text-[15px] font-semibold bg-[#212529] text-[#FFFFFFB3] p-2 shadow">
         {items}
       </ul>
     </div>
-    <img className='w-16 h-16 rounded-full' src="https://i.ibb.co.com/M22BwbG/suggestify-logo.webp" alt="" />
+    <img className='w-16 h-16 rounded-full ml-4 ' src="https://i.ibb.co.com/M22BwbG/suggestify-logo.webp" alt="" />
     <a className="btn btn-ghost text-2xl text-white">Suggestify</a>
   </div>
   <div className="navbar-center hidden lg:flex">
