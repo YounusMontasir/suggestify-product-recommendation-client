@@ -65,9 +65,7 @@ const Review = () => {
                 />
               </div>
               <h1 className="text-black mt-6 pb-10 text-center">
-                "I recently bought a new basketball from this store, and I'm so
-                impressed with the quality! The grip is perfect, and it has a
-                great bounce."
+              "The recommendations were incredibly accurate! I found exactly what I needed in minutes."
               </h1>
             </div>
           </div>
@@ -116,9 +114,7 @@ const Review = () => {
                 />
               </div>
               <h1 className="text-black mt-6 pb-10 text-center">
-                "I recently bought a new basketball from this store, and I'm so
-                impressed with the quality! The grip is perfect, and it has a
-                great bounce."
+              "A very user-friendly site with great filters. It made shopping so much easier!"
               </h1>
             </div>
           </div>
@@ -167,9 +163,7 @@ const Review = () => {
                 />
               </div>
               <h1 className="text-black mt-6 pb-10 text-center">
-                "I recently bought a new basketball from this store, and I'm so
-                impressed with the quality! The grip is perfect, and it has a
-                great bounce."
+              "I was impressed by the detailed suggestions. Definitely coming back for future searches!"
               </h1>
             </div>
           </div>

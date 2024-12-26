@@ -21,7 +21,7 @@ const Banner = () => {
         delay: 5000,
         disableOnInteraction: false,
       }}
-      className="w-full "
+      className="w-full"
     >
 
       <SwiperSlide className=" bg-[#212529] bg-cover bg-center min-h-[600px]">

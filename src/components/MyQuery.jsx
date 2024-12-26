@@ -49,30 +49,42 @@ const MyQuery = () => {
     }
     
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-11/12 lg:w-10/12 mx-auto mt-20 mb-24'>
-           {
-            myQuery.map(query=>
-                <div key={query._id} className="card bg-base-100 border border-gray-200 shadow-xl">
-  <figure className="pt-6">
-    <img
-      src={query.productImageURL}
-      alt="Shoes"
-      className="rounded-xl h-56" />
-  </figure>
-  <div className="card-body">
-  <h2 class="card-title">{query.productName}</h2>
-    <p className='text-[#6C727C]'><strong>Query</strong>: {query.queryTitle}</p>
-    <p className='text-[#6C727C] mb-4'><strong>Recommendation Count:</strong> {query.recommendationCount}</p>
-    <div className="flex justify-evenly">
-     <Link to={`/queryupdate/${query._id}`}><button className='btn btn-md text-white bg-[#2D86EB] rounded-md'>Update</button></Link>
-     <Link to={`/querydetails/${query._id}`}><button class="btn btn-md text-black  rounded-md">Details</button></Link>
-     <Link><button onClick={()=>handleDeleteQuery(query._id)} className='btn btn-md text-white bg-[#2D86EB] rounded-md'>Delete</button></Link>
-    </div>
-  </div>
+     
+        <div>
+          {myQuery.length ? <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-11/12 lg:w-10/12 mx-auto mt-20 mb-24'>
+        
+        {
+         myQuery.map(query=>
+             <div key={query._id} className="card bg-base-100 border border-gray-200 shadow-xl">
+<figure className="pt-6">
+ <img
+   src={query.productImageURL}
+   alt="Shoes"
+   className="rounded-xl h-56" />
+</figure>
+<div className="card-body">
+<h2 class="card-title">{query.productName}</h2>
+ <p className='text-[#6C727C]'><strong>Query</strong>: {query.queryTitle}</p>
+ <p className='text-[#6C727C] mb-4'><strong>Recommendation Count:</strong> {query.recommendationCount}</p>
+ <div className="flex justify-evenly">
+  <Link to={`/queryupdate/${query._id}`}><button className='btn btn-md text-white bg-[#2D86EB] rounded-md'>Update</button></Link>
+  <Link to={`/querydetails/${query._id}`}><button class="btn btn-md text-black  rounded-md">Details</button></Link>
+  <Link><button onClick={()=>handleDeleteQuery(query._id)} className='btn btn-md text-white bg-[#2D86EB] rounded-md'>Delete</button></Link>
+ </div>
 </div>
-            )
-           } 
-           
+</div>
+         )
+        } 
+        
+     </div> : 
+     <div className='mt-10 mx-auto flex justify-center flex-col items-center mb-10'>
+      <h2 className='text-2xl mb-5 font-semibold'>There is no Query of Yours</h2>
+       <Link to='/addquery'> <button className="btn btn-md text-white bg-[#2D86EB] rounded-md border-none"
+      >
+                Add Query
+              </button></Link>
+     </div>
+     }
         </div>
     );
 };

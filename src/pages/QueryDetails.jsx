@@ -4,6 +4,7 @@ import { AuthContext } from '../provider/AuthProvider';
 import axios from 'axios';
 import SpecificRecommendation from '../components/SpecificRecommendation';
 import Navbar from './../components/Navbar';
+import Swal from 'sweetalert2';
 
 const QueryDetails = () => {
     const query = useLoaderData()
@@ -36,7 +37,12 @@ const QueryDetails = () => {
         
       axios.post("http://localhost:5000/recommendations", recommendation)
       .then(res=>{
-        console.log(res.data);
+       Swal.fire({
+                       icon: "success",
+                       title: "Recommendation added Successfully",
+                       showConfirmButton: false,
+                       timer: 1500
+                     });
         
       })
 
@@ -157,7 +163,7 @@ const QueryDetails = () => {
           </div>
         </div>
         <div >
-          <SpecificRecommendation id={_id}></SpecificRecommendation>
+          <SpecificRecommendation ></SpecificRecommendation>
         </div>
        </div>
        </div>

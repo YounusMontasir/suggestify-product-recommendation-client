@@ -18,7 +18,7 @@ const RecommendationForYou = () => {
     // const recommendation = {recommendationTitle, recommendationReason,recommendedProductImage,recommendedProductName, queryId: _id, queryTitle, productName, userEmail, userName, recommenderEmail: user?.email, recommenderName: user?.displayName, 
     // currentDateTime: formattedDate };
     return (
-        <div className='w-11/12 lg:w-10/12 mx-auto mb-20'>
+        <div className='w-full md:w-11/12 lg:w-10/12 mx-auto mb-20'>
            <h2 className='text-3xl text-center mb-10 mt-10 font-bold'>Recommendation For Me</h2>
             <div class="border-2 border-gray-200 rounded-lg shadow-sm">
   <table className="w-full">
