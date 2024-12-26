@@ -22,7 +22,7 @@ const AddQuery = () => {
     
         const query = {productName, productBrand, productImageURL, queryTitle, boycottingReason, 
             currentDateTime: formattedDate, userEmail: user?.email, userName: user?.displayName, userProfileImage: user?.photoURL, recommendationCount  }
-            axios.post("http://localhost:5000/queries", query)
+            axios.post("https://suggestify-product-recommendation-server.vercel.app/queries", query)
             .then(res=>{
                  Swal.fire({
                                   icon: 'success',

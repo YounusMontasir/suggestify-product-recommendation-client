@@ -27,7 +27,7 @@ const MyRecommendation = () => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-              fetch(`http://localhost:5000/recommendations/${id}`,{
+              fetch(`https://suggestify-product-recommendation-server.vercel.app/recommendations/${id}`,{
                 method: 'DELETE'
               })
               .then(res=>res.json())

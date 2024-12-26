@@ -23,12 +23,12 @@ const router = createBrowserRouter([
         {
           path: "/",
           element: <Home></Home>,
-          loader: () => fetch("http://localhost:5000/queries")
+          loader: () => fetch("https://suggestify-product-recommendation-server.vercel.app/queries")
       },
         {
             path: "/queries",
             element: <Queries></Queries>,
-            loader: () => fetch("http://localhost:5000/queries")
+            loader: () => fetch("https://suggestify-product-recommendation-server.vercel.app/queries")
         },
         {
           path: "/myqueries",
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <QueryDetails></QueryDetails>
         </PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/querydetails/${params.id}`)
+        loader: ({params})=> fetch(`https://suggestify-product-recommendation-server.vercel.app/querydetails/${params.id}`)
       },
       {
         path: "/queryupdate/:id",

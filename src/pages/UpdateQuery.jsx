@@ -12,7 +12,7 @@ const UpdateQuery = () => {
     const [updateQuery, setUpdateQuery] = useState([])
     const {user} = useContext(AuthContext)
     useEffect(()=>{
-        fetch(`http://localhost:5000/queryupdate/${id}`)
+        fetch(`https://suggestify-product-recommendation-server.vercel.app/queryupdate/${id}`)
         .then(res=> res.json())
         .then(data=>{
            setUpdateQuery(data)
@@ -29,7 +29,7 @@ const UpdateQuery = () => {
         const queryUpdate = {productName,productImageURL, productBrand, queryTitle, boycottingReason}
         // console.log(queryUpdate);
         
-        axios.patch(`http://localhost:5000/queryupdate/${id}`, queryUpdate)
+        axios.patch(`https://suggestify-product-recommendation-server.vercel.app/queryupdate/${id}`, queryUpdate)
         .then(res=>{
                 
                 Swal.fire({

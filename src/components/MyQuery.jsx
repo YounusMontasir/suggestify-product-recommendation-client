@@ -29,7 +29,7 @@ const MyQuery = () => {
         confirmButtonText: "Yes, delete it!"
       }).then((result) => {
         if (result.isConfirmed) {
-          fetch(`http://localhost:5000/queries/${id}`,{
+          fetch(`https://suggestify-product-recommendation-server.vercel.app/queries/${id}`,{
             method: 'DELETE'
           })
           .then(res=>res.json())

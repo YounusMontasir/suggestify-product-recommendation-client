@@ -5,7 +5,7 @@ import { AuthContext } from '../provider/AuthProvider';
 
 
 const axiosInstance = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://suggestify-product-recommendation-server.vercel.app',
     withCredentials: true,
 })
 const useAxiosSecure = () => {

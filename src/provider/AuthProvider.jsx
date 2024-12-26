@@ -40,7 +40,7 @@ export const AuthContext = createContext()
             
             if(currentUser?.email){
                 const userr = {email: currentUser.email}
-                axios.post('http://localhost:5000/jwt', userr, {withCredentials: true})
+                axios.post('https://suggestify-product-recommendation-server.vercel.app/jwt', userr, {withCredentials: true})
                 .then(res=> {
                     console.log(res.data)
                     setLoading(false)
@@ -48,7 +48,7 @@ export const AuthContext = createContext()
                 
             }
             else{
-                axios.post('http://localhost:5000/logout', {}, {
+                axios.post('https://suggestify-product-recommendation-server.vercel.app/logout', {}, {
                     withCredentials:  true
                 })
                 .then(res=>{

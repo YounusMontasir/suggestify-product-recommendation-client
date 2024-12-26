@@ -42,9 +42,13 @@ Suggestify is a web-based platform where users can manage their product-related 
 - Firebase Authentication
 - JWT (JSON Web Tokens)
 
-### Deployment:
-- Frontend: Firebase Hosting
-- Backend: Deployed on a cloud-based Node.js server
+### Npm Packages use:
+- swiper
+- sweetalert2
+- react-router-dom
+- react-icons
+- react-awesome-reveal
+- lottie-react
 
 
 ## Usage
@@ -55,7 +59,3 @@ Suggestify is a web-based platform where users can manage their product-related 
 4. Update or delete your content as needed.
 
 
-
----
-
-Enjoy using **Suggestify** and feel free to reach out for any questions or support!

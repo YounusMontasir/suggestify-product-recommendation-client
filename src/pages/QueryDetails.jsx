@@ -35,7 +35,7 @@ const QueryDetails = () => {
         currentDateTime: formattedDate };
         console.log(recommendation);
         
-      axios.post("http://localhost:5000/recommendations", recommendation)
+      axios.post("https://suggestify-product-recommendation-server.vercel.app/recommendations", recommendation)
       .then(res=>{
        Swal.fire({
                        icon: "success",
