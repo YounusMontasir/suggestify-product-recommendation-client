@@ -40,7 +40,7 @@ const Register = () => {
         const user = result.user
         setUser(user)
         updateUserProfile(name, image)
-        console.log(user);
+        // console.log(user);
         navigate("/")
         Swal.fire({
             icon: "success",

@@ -15,7 +15,7 @@ const SpecificRecommendation = () => {
   }, [id]);
   // const {recommendationTitle, recommendationReason,recommendedProductImage,recommendedProductName, queryId, queryTitle, productName, userEmail, userName, recommenderEmail, recommenderName,
   //     currentDateTime } = specificQuery;
-  console.log(specificQuery);
+  // console.log(specificQuery);
 
   return (
     <div className="mt-24 mb-20">

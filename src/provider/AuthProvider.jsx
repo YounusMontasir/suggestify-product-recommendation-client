@@ -36,13 +36,13 @@ export const AuthContext = createContext()
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, currentUser=>{
             setUser(currentUser);
-            console.log("dsfd", currentUser);
+            // console.log("dsfd", currentUser);
             
             if(currentUser?.email){
                 const userr = {email: currentUser.email}
                 axios.post('https://suggestify-product-recommendation-server.vercel.app/jwt', userr, {withCredentials: true})
                 .then(res=> {
-                    console.log(res.data)
+                    // console.log(res.data)
                     setLoading(false)
                 })
                 
@@ -52,7 +52,7 @@ export const AuthContext = createContext()
                     withCredentials:  true
                 })
                 .then(res=>{
-                    console.log("logout", res.data);
+                    // console.log("logout", res.data);
                     setLoading(false)
                     
                 })

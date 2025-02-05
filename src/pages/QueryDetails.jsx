@@ -33,7 +33,7 @@ const QueryDetails = () => {
       const formattedDate = isoDate.slice(0, -5) + 'Z';
       const recommendation = {recommendationTitle, recommendationReason,recommendedProductImage,recommendedProductName, queryId: _id, queryTitle, productName, userEmail, userName, recommenderEmail: user?.email, recommenderName: user?.displayName, 
         currentDateTime: formattedDate };
-        console.log(recommendation);
+        // console.log(recommendation);
         
       axios.post("https://suggestify-product-recommendation-server.vercel.app/recommendations", recommendation)
       .then(res=>{
