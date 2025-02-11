@@ -1,16 +1,15 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer class=" bg-neutral flex  flex-col items-center  p-10">
+        <footer class=" bg-[#212529]  flex  flex-col items-center  p-10">
         <img className='w-10 h-10 md:w-16 md:h-16 rounded-full  ' src="https://i.ibb.co.com/M22BwbG/suggestify-logo.webp" alt="" />
         <a className="text-xl md:text-2xl text-white font-bold mt-3 mb-2">Suggestify</a>
         <div className='text-[#2D86EB]  text-xl flex flex-col lg:flex-row gap-4 mb-6'>
-          <p>Home</p>
-          <p>About Us</p>
-          <p>Contact Us</p>
-          <p>Legal Notice</p>
-          <p>Our Terms</p>
+          <NavLink to="/"><p>Home</p></NavLink>
+             <NavLink to="/queries"><p>Queries</p></NavLink>
+             <NavLink to="/aboutus"><p>About Us</p></NavLink>
         </div>
         
          
