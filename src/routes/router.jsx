@@ -14,6 +14,7 @@ import UpdateQuery from '../pages/UpdateQuery';
 import PrivateRoute from './PrivateRoute';
 import ErrorPage from '../pages/ErrorPage';
 import AddQuery from '../pages/AddQuery';
+import AboutUs from '../pages/AboutUs';
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
           element: <Home></Home>,
           loader: () => fetch("https://suggestify-product-recommendation-server.vercel.app/queries")
       },
+      {
+        path: "/aboutus",
+        element: <AboutUs></AboutUs>,
+    },
         {
             path: "/queries",
             element: <Queries></Queries>,
