@@ -103,7 +103,7 @@ const Queries = () => {
             </p>
 
           
-            <div className={`grid ${gridCols === 3 ? 'sm:grid-cols-1 lg:grid-cols-3' : gridCols === 2 ? 'grid-cols-2' : 'grid-cols-1'} gap-6`}>
+            <div className={`grid ${gridCols === 3 ? 'sm:grid-cols-1 lg:grid-cols-3' : gridCols === 2 ? 'sm:grid-cols-1 lg:grid-cols-2' : 'grid-cols-1'} gap-6`}>
                 {
                     sortedQueries.map(query => <QueryCard key={query._id} query={query}></QueryCard>)
                 }
