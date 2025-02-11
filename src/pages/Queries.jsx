@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import QueryCard from '../components/QueryCard';
+import { IoMdArrowDropdown } from 'react-icons/io';
 
 
 const Queries = () => {
@@ -57,6 +58,13 @@ const Queries = () => {
 </label>
                 </div>
             </div>
+            <div className="dropdown ">
+  <div tabIndex={0} role="button" className="btn m-1 bg-[#2D86EB] text-white">Sorted By Recommendations <IoMdArrowDropdown /></div>
+  <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+    <li><a>Ascending</a></li>
+    <li><a>Descending</a></li>
+  </ul>
+</div>
             <h2 className='text-black text-center font-bold text-5xl mb-5'>Latest Community Questions</h2>
             <p className='text-[#6C727C] text-center font-medium mb-10'>Explore the most recent queries from our community and share your insights.</p>
             <div className={`grid  ${gridCols === 3 ? 'sm:grid-cols-1 lg:grid-cols-3' : gridCols === 2 ? 'grid-cols-2' : 'grid-cols-1'} gap-6`}>
