@@ -82,11 +82,11 @@ const Queries = () => {
             </div>
 
            
-            <div className="dropdown mb-6">
+            <div className="dropdown mb-6 flex justify-end">
                 <div tabIndex={0} role="button" className="btn m-1 bg-[#2D86EB] text-white flex items-center">
                     Sorted By Recommendations <IoMdArrowDropdown />
                 </div>
-                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 mt-14 p-2 shadow">
                     <li>
                         <button onClick={() => setSortOrder('asc')}>Ascending</button>
                     </li>
